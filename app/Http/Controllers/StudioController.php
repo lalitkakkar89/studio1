@@ -133,6 +133,7 @@ class StudioController extends Controller
         $b = date( 'H:i', strtotime($list['ClosingTime']) );
         //dd($list['Date']);
         //dd($todaydate);
+        //
         if (($starttime > $a && $starttime < $b) && ($list['UserId'] != $UserId) && ($list['Date'] == $todaydate) ) {
             //dd("dasd");
             return redirect()->route('studio.index')
